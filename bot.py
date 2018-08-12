@@ -36,4 +36,4 @@ async def on_ready():
     print(f'Current Version For Discord Bot : {discord.__version__}')
     print(f'Time And Date {datetime.datetime.now().ctime()}')
 
-bot.run("NDY1OTI4MzM2NzIwMzk2Mjk5.DkaTpQ.aCREGm3c-nG7-b57jpQXZEBQ6RI")
+bot.run("you-token-here")
