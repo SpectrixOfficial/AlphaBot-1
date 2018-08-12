@@ -27,7 +27,7 @@ class HomeCog:
     async def help(self, ctx):
         helpEmbed = discord.Embed(colour=discord.Colour(value=0x2a446d))
         helpEmbed.set_author(icon_url=ctx.author.avatar_url, name=str(ctx.author))
-        helpEmbed.add_field(name="For A List Of Public Commands Go Here:", value="https://enternewname.github.io/alphabotsite/alphahelp/commands", inline=True)
+        helpEmbed.add_field(name="For A List Of Public Commands Go Here:", value="https://alphadevelopmentteam.github.io/alphabotsite/alphahelp/commands", inline=True)
         helpEmbed.set_footer(text="Join The Support Server For More Help by .support or .server 👍")
         await ctx.send(embed=helpEmbed)
         print(f"Server ID | {ctx.author.guild.id} | Server Name | {ctx.author.guild} | Channel Name: {ctx.channel} | Channel ID: {ctx.channel.id} | Author Name: {ctx.author} | Author ID: {ctx.author.id} | Sent Help | {datetime.datetime.now().ctime()}")
