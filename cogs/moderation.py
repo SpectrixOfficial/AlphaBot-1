@@ -54,6 +54,8 @@ class ModerationCog:
         if ctx.message.author.guild_permissions.ban_members or ctx.message.author.id == 373256462211874836:
             if user == ctx.author:
                 await ctx.send("**You Can't Ban Yourself**", delete_after=3.0)
+            elif user == self.bot.user:
+                await ctx.send("I Can't Ban Myself Y'know")
             else:
                 try:
                     await user.ban(reason=f"Banned {user} By {ctx.author}, User ID: {ctx.author.id}, Reason:{banReason}")
@@ -78,6 +80,8 @@ class ModerationCog:
             if user == ctx.author:
                 await ctx.send("**You Can't Kick Yourself....**")
                 await ctx.message.delete()
+            elif user == self.bot.user:
+                await ctx.send("I Can't Kick Myself Y'know")
             else:
                 try:
                     await user.kick(reason=f"{user} Kicked By {ctx.author}, User ID: {ctx.author.id}, Reason:{kickReason}")
