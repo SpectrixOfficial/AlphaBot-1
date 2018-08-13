@@ -9,6 +9,7 @@ import io
 import aiohttp
 import json 
 from discord.ext.commands.cooldowns import BucketType
+import os
 
 
                          
@@ -36,4 +37,5 @@ async def on_ready():
     print(f'Current Version For Discord Bot : {discord.__version__}')
     print(f'Time And Date {datetime.datetime.now().ctime()}')
 
-bot.run("you-token-here")
+f = open("token.txt")
+bot.run(f.read())
