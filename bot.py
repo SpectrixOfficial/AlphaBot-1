@@ -17,11 +17,19 @@ bot = commands.Bot(command_prefix=commands.when_mentioned_or("."), case_insensit
 bot.remove_command("help")
 
 
-startup_extensions = ['cogs.moderation',
-                      'cogs.owner',
-                      'cogs.home',
-                      'cogs.eventhandler',
-                      'cogs.server']
+startup_extensions = ['cogs.framework.eventhandler',
+                     'cogs.framework.owner',
+                     'cogs.framework.home',
+                     'cogs.moderation.ban', 
+                     'cogs.moderation.clear',
+                     'cogs.moderation.createrole',
+                     'cogs.moderation.deleterole',
+                     'cogs.moderation.giverole',
+                     'cogs.moderation.kick',
+                     'cogs.moderation.permission',
+                     'cogs.moderation.removerole',
+                     'cogs.moderation.softban',
+                     'cogs.serverexclusive.server',]
 
  
 if __name__ == '__main__':
@@ -37,5 +45,5 @@ async def on_ready():
     print(f'Current Version For Discord Bot : {discord.__version__}')
     print(f'Time And Date {datetime.datetime.now().ctime()}')
 
-f = open("C:\Users\Lithimus\Documents\VS Code\Alpha Bot Script(Py)\token.txt")
+f = open("C:/Users/Lithimus/Documents/VS Code/Alpha Bot Script(Py)/token.txt")
 bot.run(f.read())
