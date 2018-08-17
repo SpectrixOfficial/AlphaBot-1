@@ -37,5 +37,5 @@ async def on_ready():
     print(f'Current Version For Discord Bot : {discord.__version__}')
     print(f'Time And Date {datetime.datetime.now().ctime()}')
 
-f = open("token.txt")
+f = open("C:\Users\Lithimus\Documents\VS Code\Alpha Bot Script(Py)\token.txt")
 bot.run(f.read())
